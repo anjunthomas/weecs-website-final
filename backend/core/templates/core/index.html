@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="fade-in fade-in-delay-1">Women In Electrical Engineering<br>And Computer Science</h1>
+    <p class="fade-in fade-in-delay-2">
+      A supportive community at UCF helping women grow in computing, connect
+      with mentors, and build lasting careers.
+    </p>
+    <a href="{% url 'about' %}" class="hero-button fade-in fade-in-delay-3">Learn More</a>
+  </div>
+</section>
+
+<section class="mission">
+  <div class="container">
+    <h2>Our Mission</h2>
+    <p>We empower women in STEM by building community, offering mentorship, and providing professional development opportunities.</p>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="container grid">
+    <div class="card">
+      <h3>Events</h3>
+      <p>Workshops, panels, socials, and more.</p>
+    </div>
+    <div class="card">
+      <h3>Community</h3>
+      <p>A space to support, uplift, and grow together.</p>
+    </div>
+    <div class="card">
+      <h3>Projects</h3>
+      <p>Hands-on opportunities to build and learn.</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<section class="events-container">
+  <h1>Upcoming Events</h1>
+  {% for event in events %}
+  <div class="event-card">
+    <h2>{{ event.title }}</h2>
+    <p><strong>Date:</strong> {{ event.date }}</p>
+    <p><strong>Time:</strong> {{ event.time }}</p>
+    <p><strong>Location:</strong> {{ event.location }}</p>
+    <p>{{ event.description }}</p>
+  </div>
+  {% empty %}
+  <p>No events at the moment. Check back soon!</p>
+  {% endfor %}
+</section>
+{% endblock %}

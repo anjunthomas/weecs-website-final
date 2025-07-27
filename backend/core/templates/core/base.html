@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'core/index.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>{% block title %}WEECS{% endblock %}</title>
+  </head>
+  <body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">WEECS</div>
+      <ul class="nav-links">
+        <li><a href="{% url 'home' %}">HOME</a></li>
+        <li><a href="{% url 'about' %}">ABOUT</a></li>
+        <li><a href="{% url 'events' %}">EVENTS</a></li>
+        <li><a href="{% url 'gallery' %}">GALLERY</a></li>
+        <li><a href="{% url 'contact' %}">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Women in EECS at UCF</p>
+  </footer>
+</body>
+</html>
