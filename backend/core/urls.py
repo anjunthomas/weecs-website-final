@@ -8,5 +8,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('gallery/', views.gallery, name='gallery'),
     path('sponsors/', views.sponsors, name='sponsors'),
-    path('constact/', views.contact, name='contact')
+    path('constact/', views.contact, name='contact'),
+    path('calendar-snippet/', views.calendar_snippet, name='calendar-snippet'),
 ]
+

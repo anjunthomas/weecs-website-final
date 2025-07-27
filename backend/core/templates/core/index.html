@@ -3,14 +3,24 @@
 
 <section class="hero">
   <div class="hero-content">
-    <h1 class="fade-in fade-in-delay-1">Women In Electrical Engineering<br>And Computer Science</h1>
-    <p class="fade-in fade-in-delay-2">
-      A supportive community at UCF helping women grow in computing, connect
-      with mentors, and build lasting careers.
+    <h1 class="animate__animated animate__fadeInDown animate__slow ">Women In Electrical Engineering<br>And Computer Science</h1>
+    <p class="animate__animated animate__fadeInDown animate__slow " style="animation-delay: 0.25s;">
+      WEECS is a social and professional non-profit organization at UCF established to support women pursuing Electrical Engineering or Computer Science with mentorship, hands-on hardware and software projects and workshops, and fun social events.
+        If any of these interests you, WEECS is the place for you!
     </p>
-    <a href="{% url 'about' %}" class="hero-button fade-in fade-in-delay-3">Learn More</a>
+    <a href="{% url 'about' %}" class="hero-button animate__animated animate__fadeInDown animate__slow " style="animation-delay: 0.5s;">Learn More</a>
   </div>
 </section>
+
+<section class="calendar-section">
+  <div class="container">
+    <h2>Stay up to date!</h2>
+    <div id="calendar-container" hx-get="{% url 'calendar-snippet' %}" hx-trigger="load" hx-swap="innerHTML">
+      <!-- Calendar will load here -->
+    </div>
+  </div>
+</section>
+
 
 <section class="mission">
   <div class="container">
@@ -35,5 +45,6 @@
     </div>
   </div>
 </section>
+
 
 {% endblock %}

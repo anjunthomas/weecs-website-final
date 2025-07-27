@@ -1,3 +1,10 @@
+header {
+  z-index: 1000;
+  background-color: white;
+  position: sticky;
+  top: 0;
+}
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -41,7 +48,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #010216;
+  background-color: #ffffff;
   color: white;
   margin: 0;
 }
@@ -79,18 +86,18 @@ body {
   background-color: #f0c6d6;
   background-image: url("data:image/svg+xml,%3Csvg width='48' height='32' viewBox='0 0 48 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239f4e69' fill-opacity='0.18'%3E%3Cpath d='M27 32c0-3.314 2.686-6 6-6 5.523 0 10-4.477 10-10S38.523 6 33 6c-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 6.627 0 12 5.373 12 12s-5.373 12-12 12c-2.21 0-4 1.79-4 4h-2zm-6 0c0-3.314-2.686-6-6-6-5.523 0-10-4.477-10-10S9.477 6 15 6c3.314 0 6-2.686 6-6h-2c0 2.21-1.79 4-4 4C8.373 4 3 9.373 3 16s5.373 12 12 12c2.21 0 4 1.79 4 4h2z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
-  padding: 4em 2em;
+  padding: 8.5em 2em;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 4.25rem;
-  font-weight: 900;
+  font-size: 4rem;
+  font-weight: 800;
   line-height: 1.2;
   color: #3a3a3a;
-  padding: 8rem 1rem; 
-  min-height: 1vh;
-  font-family: "Inter", sans-serif;
+  padding: 2.5rem 1rem; 
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
 }
 
 .hero p {
@@ -99,6 +106,10 @@ body {
   font-family: "Inter", sans-serif;
   max-width: 800px;
   margin: 0 auto 2rem;
+  padding: 1.5rem 1rem; 
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .hero-button {
@@ -127,30 +138,44 @@ body {
   margin: auto;
 }
 
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(20px);
-  }
+/*for hero fade in transition*/
+.animate__slow { 
+  animation-duration: 1.5s;
 }
 
-.fade-in {
-  animation: fadeInDown 1s ease-out forwards;
-  opacity: 0;
+.calendar-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #fdf7f9;
 }
 
-.fade-in-delay-1 {
-  animation-delay: 0.3s;
+.calendar-box h3 {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-.fade-in-delay-2 {
-  animation-delay: 0.4s;
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  max-width: 500px;
+  margin: auto;
 }
 
-.fade-in-delay-3 {
-  animation-delay: 0.5s;
+.calendar-cell {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  border-radius: 6px;
+}
+
+.calendar-cell.has-event {
+  background: #f0c6d6;
+  font-weight: bold;
+  color: #7c2645;
+  cursor: pointer;
+}
+
+.calendar-cell.empty {
+  background: transparent;
 }
