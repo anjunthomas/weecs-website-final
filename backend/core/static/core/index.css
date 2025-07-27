@@ -46,14 +46,6 @@ header {
   color: #f0c6d6;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: white;
-  margin: 0;
-}
-
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -143,39 +135,3 @@ body {
   animation-duration: 1.5s;
 }
 
-.calendar-section {
-  margin-top: 4rem;
-  padding: 2rem;
-  background-color: #fdf7f9;
-}
-
-.calendar-box h3 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0.5rem;
-  max-width: 500px;
-  margin: auto;
-}
-
-.calendar-cell {
-  text-align: center;
-  padding: 1rem;
-  background: #eee;
-  border-radius: 6px;
-}
-
-.calendar-cell.has-event {
-  background: #f0c6d6;
-  font-weight: bold;
-  color: #7c2645;
-  cursor: pointer;
-}
-
-.calendar-cell.empty {
-  background: transparent;
-}

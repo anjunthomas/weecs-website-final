@@ -1,4 +1,6 @@
 {% extends 'core/base.html' %}
+{% load vite %}
+{% load static %}
 {% block content %}
 
 <section class="hero">
@@ -13,12 +15,13 @@
 </section>
 
 <section class="calendar-section">
-  <div class="container">
-    <h2>Stay up to date!</h2>
-    <div id="calendar-container" hx-get="{% url 'calendar-snippet' %}" hx-trigger="load" hx-swap="innerHTML">
-      <!-- Calendar will load here -->
-    </div>
-  </div>
+
+  <!-- React mounting point -->
+  <div id="react-root"></div>
+
+  <!-- Link to Vite-generated React assets -->
+  <link rel="stylesheet" href="{% vite_asset 'src/main.jsx' 'css' %}">
+  <script type="module" src="{% vite_asset 'src/main.jsx' %}"></script>
 </section>
 
 
