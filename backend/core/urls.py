@@ -1,3 +1,4 @@
+from django.contrib import admin
 from django.urls import path
 from . import views
 
@@ -8,7 +9,8 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('gallery/', views.gallery, name='gallery'),
     path('sponsors/', views.sponsors, name='sponsors'),
-    path('constact/', views.contact, name='contact'),
+    path('contact/', views.contact, name='contact'),
     path('calendar-snippet/', views.calendar_snippet, name='calendar-snippet'),
+    path('api/events/', views.get_events, name='get_events'),
 ]
 

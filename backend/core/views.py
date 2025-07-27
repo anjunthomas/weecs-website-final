@@ -4,6 +4,8 @@ from datetime import date
 from calendar import Calendar
 from django.template.loader import render_to_string
 from django.http import HttpResponse
+from django.http import JsonResponse
+from .models import Event
 
 def home(request):
     return render(request, 'core/index.html')
@@ -42,3 +44,7 @@ def calendar_snippet(request):
         "event_days": event_days,
     }
     return render(request, "core/calendar_snippet.html", context)
+
+def get_events(request):
+    events = Event.objects.all().values('title', 'date', 'description')
+    return JsonResponse(list(events), safe=False)
