@@ -114,6 +114,8 @@ header {
   text-decoration: none;
   transition: background-color 0.3s ease;
   font-family: "Fira Code", monospace;
+  animation: pulse-glow 2.5s infinite;
+  transition: background-color 0.3s ease;
 }
 
 .hero-button:hover {
@@ -132,6 +134,22 @@ header {
 
 /*for hero fade in transition*/
 .animate__slow { 
-  animation-duration: 1.5s;
+  animation-duration: 10s;
 }
 
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(130, 42, 77, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(130, 42, 77, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(130, 42, 77, 0.5);
+  }
+}
+
+.hero-button:hover {
+  background-color: #a54868;
+}

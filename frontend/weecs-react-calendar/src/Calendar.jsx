@@ -1,6 +1,8 @@
 import React, { useState, useEffect  } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import './styles/CalendarStyles.css';
+import './index.css';
 
 function MyCalendar() {
   const [value, setValue] = useState(new Date());
@@ -20,6 +22,7 @@ function MyCalendar() {
 
   return (
     <div className="calendar-container">
+    
       <Calendar
         onChange={setValue}
         value={value}
