@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+{% load vite %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Officers</title>
+</head>
+<body class="bg-white">
+  <div id="officers-root"></div>
+
+  <script type="module" src="{% vite_asset 'src/main.jsx' %}"></script>
+</body>
+</html>
+{% endblock %}

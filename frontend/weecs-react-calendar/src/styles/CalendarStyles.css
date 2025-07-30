@@ -6,11 +6,20 @@
   border-radius: 10px;
   color: black;
   z-index: 0;
+  transform: scale(1.1);
+  transform-origin: center;
+  margin: 0 auto;
 } 
 
 .react-calendar__tile--now {
   background: #e7cede;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .react-calendar {
+    transform: scale(1);
+  }
 }
 
 
@@ -24,6 +33,9 @@
   margin-top: 1.5rem;
   font-size: 1rem;
   color: #9f4e69;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* calendar itself */
@@ -36,6 +48,13 @@
 
 .calendar-wrapper {
   position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.calendar-section1 {
+  flex-shrink: 0;
+  margin-bottom: 1.5rem;
 }
 
 /* section surrounding the calendar, header */
@@ -46,13 +65,16 @@
   margin-top: 2rem;
 }
 
+.calendar-section-title {
+  color: #9f4e69;
+  font-size: 4rem;
+}
+
 .highlight {
-  background-color: #faf8f9 !important;
-  border-radius: 75%;
+  background-color: #f0c6d6 !important;
+  border-radius: 75% !important;;
   font-weight: bold;
   color: #7c2645 !important;
-  position: relative;
-  z-index: 0;
 }
 
 @property --angle{
@@ -60,26 +82,38 @@
     initial-value: 0deg;
     inherits: false;
 }
-.highlight::after, .highlight::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), transparent 50%, #f0c6d6);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 2px;
-    border-radius: 10px;
-    animation: 3s spin linear infinite;
+
+.selected-event {
+  margin-top: 2rem;
+  text-align: center;
 }
 
-.highlight::before{
-    filter: blur(1.6rem);
-    opacity: 0.5;
+.event-details {
+  margin: 1rem auto;
+  max-width: 700px;
+  padding: 1rem 1.5rem;
+  background-color: #fff0f5;
+  border: 5px solid #664783;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
+.event-details h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: #7c2645;
+}
+
+.event-details p {
+  margin: 0;
+  color: #4d2c38;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/*
 @keyframes spin{
     from {
         --angle: 0deg;
@@ -88,3 +122,5 @@
         --angle: 360deg;
     }
 }
+*/
+

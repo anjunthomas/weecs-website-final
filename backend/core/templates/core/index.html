@@ -6,10 +6,7 @@
 <section class="hero">
   <div class="hero-content">
     <h1 class="animate__animated animate__fadeInDown animate__slow ">Women In Electrical Engineering<br>And Computer Science</h1>
-    <p class="animate__animated animate__fadeInDown animate__slow " style="animation-delay: 0.25s;">
-      WEECS is a social and professional non-profit organization at UCF established to support women pursuing Electrical Engineering or Computer Science with mentorship, hands-on hardware and software projects and workshops, and fun social events.
-        If any of these interests you, WEECS is the place for you!
-    </p>
+    <p id="typewriter" class="hero-paragraph blinking-cursor"></p>
     <a href="{% url 'about' %}" class="hero-button animate__animated animate__fadeInDown animate__slow " style="animation-delay: 0.5s;">Learn More</a>
   </div>
 </section>
@@ -21,6 +18,7 @@
 
   <!-- Link to Vite-generated React assets -->
   <link rel="stylesheet" href="{% vite_asset 'src/main.jsx' 'css' %}">
+  <script src="{% static 'scripts/typewriter.js' %}"></script>
   <script type="module" src="{% vite_asset 'src/main.jsx' %}"></script>
 </section>
 

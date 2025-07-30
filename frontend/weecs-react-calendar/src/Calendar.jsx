@@ -7,6 +7,8 @@ import './index.css';
 function MyCalendar() {
   const [value, setValue] = useState(new Date());
   const [events, setEvents] = useState({});
+  const dateStr = value.toISOString().split('T')[0];
+  const selectedEvent = events[dateStr];
 
     useEffect(() => {
     fetch('/api/events/')
@@ -14,7 +16,11 @@ function MyCalendar() {
       .then(data => {
         const mappedEvents = {};
         data.forEach(event => {
-          mappedEvents[event.date] = event.title; // or store full event object
+          mappedEvents[event.date] = 
+          {title: event.title,
+          description: event.description,
+          };
+
         });
         setEvents(mappedEvents);
       });
@@ -22,19 +28,28 @@ function MyCalendar() {
 
   return (
     <div className="calendar-container">
+      <div className="calendar-section1">
+        <Calendar
+          onChange={setValue}
+          value={value}
+          tileClassName={({ date }) => {
+            const dateStr = date.toISOString().split('T')[0];
+            return events[dateStr] ? 'highlight' : null;
+          }}
+        />
     
-      <Calendar
-        onChange={setValue}
-        value={value}
-        tileClassName={({ date }) => {
-          const dateStr = date.toISOString().split('T')[0];
-          return events[dateStr] ? 'highlight' : null;
-        }}
-      />
-     <p>Selected: {value.toDateString()}</p>
-      {events[value.toISOString().split('T')[0]] && (
-        <div><strong>Event:</strong> {events[value.toISOString().split('T')[0]]}</div>
-      )}
+        <div className="selected-event">
+          <p><strong>Date:</strong> {value.toDateString()}</p>
+            {selectedEvent ? (
+              <div className="event-details">
+                <h3>{selectedEvent.title}</h3>
+                {selectedEvent.description && <p>{selectedEvent.description}</p>}
+              </div>
+            ) : (
+              <p>No events on this date.</p>
+            )}
+        </div>
+      </div>
     </div>
   );
 }

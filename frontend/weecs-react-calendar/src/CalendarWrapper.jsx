@@ -56,7 +56,7 @@ const CalendarComponent = () => {
   return (
     <>
     <div id="calendar-section" className="calendar-wrapper">
-      <h1>Join our next event!</h1>
+      <h1 className="calendar-section-title">Join our next event!</h1>
       {/* Left Lightning */}
       <LightningBolt className="lightning-bolt right-bolt"/>
       <div className="calendar-box">

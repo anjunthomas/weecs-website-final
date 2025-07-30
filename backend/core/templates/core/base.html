@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <header>
+  <header class="navbar-wrapper">
     <nav class="navbar">
       <div class="logo">WEECS</div>
       <ul class="nav-links">
@@ -33,6 +33,7 @@
           hx-push-url="true"
         >ABOUT</a></li>
         <li><a href="{% url 'events' %}">EVENTS</a></li>
+        <li><a href="{% url 'officers' %}">OFFICERS</a></li>
         <li><a href="{% url 'gallery' %}">GALLERY</a></li>
         <li><a href="{% url 'contact' %}">CONTACT</a></li>
       </ul>

@@ -1,7 +1,7 @@
-### WEECS website.
+### WEECS website
 
 ### Running project
-    1. Use a virtual environment 
+    1. From root folder, enable virtual environment 
         * For powershell - .\venv\Scripts\Activate.ps1
         * For bash - source venv/bin/activate
 
