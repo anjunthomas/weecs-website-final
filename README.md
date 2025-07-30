@@ -1,4 +1,4 @@
-### Welcome to the weec website.
+### WEECS website.
 
 ### Running project
     1. Use a virtual environment 
