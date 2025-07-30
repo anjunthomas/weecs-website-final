@@ -1,0 +1,72 @@
+.lightning-bolt{
+    filter: drop-shadow(0 0 5px #AE6A85)
+            drop-shadow(0 0 10px #db739c)
+            drop-shadow(0 0 1px rgba(255, 255, 255, 0.3))
+            drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+    width: 100px;
+    height: auto;
+}
+
+.left-bolt {
+    position: absolute;
+    left: 40px;
+    top: 200px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.right-bolt {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    top: 400px;
+    left: 200px;
+}
+
+.middle-bolt {
+    position: absolute;
+    left: 75%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.cosmo-mind {
+    position: absolute;
+    left: 90%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+
+/* to animate lightning bolts */
+
+
+@keyframes float-lightning {
+    0% {
+        transform: translateY(0) rotate(2deg);
+    }
+
+    25% {
+
+        transform: translateY(10px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(2deg);
+    }
+
+    75% {
+        transform: translateY(-10px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(2deg);
+    }
+}
+
+.lightning-bolt {
+    animation: float-lightning 3s ease-in-out infinite;
+}
+
