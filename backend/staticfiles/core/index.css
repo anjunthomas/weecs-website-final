@@ -1,0 +1,236 @@
+header {
+  z-index: 1000;
+  background-color: white;
+  position: sticky;
+  top: 0;
+}
+
+
+body {
+  color: #f3f3f8;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.navbar-wrapper {
+  padding: 0.5rem;
+  background-color: #f0c6d6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 2em;
+  background-color: white;
+  position: sticky;
+  border-radius: 30px;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  position: absolute;
+  left: 2em;
+  font-weight: bold;
+  color: #9f4e69;
+  font-size: 1.25rem;
+  font-family: "Inter", sans-serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #666674;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.nav-links a:hover {
+  color: #f0c6d6;
+}
+
+
+.hero {
+  background-color: #f0c6d6;
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='32' viewBox='0 0 48 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239f4e69' fill-opacity='0.18'%3E%3Cpath d='M27 32c0-3.314 2.686-6 6-6 5.523 0 10-4.477 10-10S38.523 6 33 6c-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 6.627 0 12 5.373 12 12s-5.373 12-12 12c-2.21 0-4 1.79-4 4h-2zm-6 0c0-3.314-2.686-6-6-6-5.523 0-10-4.477-10-10S9.477 6 15 6c3.314 0 6-2.686 6-6h-2c0 2.21-1.79 4-4 4C8.373 4 3 9.373 3 16s5.373 12 12 12c2.21 0 4 1.79 4 4h2z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  padding: 4em 2em;
+  text-align: center;
+  width: 100%;
+  height: 75vh;
+}
+
+.hero-content {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 1000;
+  line-height: 1.2;
+  color: #fff;
+  padding: 2.5rem 1rem; 
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
+  text-shadow:
+    0 0 5px #Fd3db5,
+    0 0 10px #db739c,
+    0 0 1px rgba(255, 255, 255, 0.3),
+    0 0 2px rgba(255, 255, 255, 0.7);
+}
+
+.hero p {
+  white-space: pre-wrap; 
+  overflow-wrap: break-word;
+  overflow: hidden;
+  border-right: 3px solid #4a1c2b;
+  font-size: 1.5rem; 
+  color: #4a1c2b;     
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem 1rem; 
+  font-weight: 700;
+  line-height: 1.6;
+  width: 100%;
+}
+
+.blinking-cursor::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+
+.hero-button {
+  background-color: #822a4d;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: "Fira Code", monospace;
+}
+
+.hero-button:hover {
+  background-color: #Fd3db5;
+  transform: scale(1.05);
+}
+
+.mission, .highlights {
+  padding: 3em;
+  background-color: #0f162e;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+/*for hero fade in transition*/
+.animate__slow { 
+  animation-duration: 10s;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+}
+
+.card {
+  background-color: #222c47;
+  padding: 1.5em;
+  border-radius: 10px;
+  color: white;
+}
+
+
+.events-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.event-card {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(130, 42, 77, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(130, 42, 77, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(130, 42, 77, 0.5);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(50vw);
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* for half screens */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .hero-paragraph {
+    font-size: 1rem;
+    padding: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+}

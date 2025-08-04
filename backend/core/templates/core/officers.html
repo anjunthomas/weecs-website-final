@@ -1,17 +1,30 @@
 {% extends 'core/base.html' %}
 {% load vite %}
 {% load static %}
-{% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Officers</title>
-</head>
-<body class="bg-white">
-  <div id="officers-root"></div>
 
-  <script type="module" src="{% vite_asset 'src/main.jsx' %}"></script>
-</body>
-</html>
+{% block head %}
+    <link rel="stylesheet" href="{% static 'core/officers.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="officers-container">
+  {% regroup officers by group as grouped_officers %}
+
+  {% for group in grouped_officers %}
+      <h2 class="group-title">{{ group.grouper }}</h2>
+      <div class="officers-grid">
+          {% for officer in group.list %}
+              <div class="officer-card">
+                  <img src="{{ officer.photo.url }}" alt="{{ officer.name }}" class="officer-img">
+                  <div class="officer-info">
+                      <strong>{{ officer.name }}</strong><br>
+                      <div class="officer-role">
+                        <span>{{ officer.role }}</span>
+                      </div>
+                  </div>
+              </div>
+          {% endfor %}
+      </div>
+  {% endfor %}
+</div>
 {% endblock %}

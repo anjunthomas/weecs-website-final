@@ -1,0 +1,44 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.officers-container {
+    padding: 1rem;
+    max-width: 1300px;
+    margin: auto;
+}
+  
+.group-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color:black;
+    margin: 2rem 0 2rem;
+}
+  
+.officers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: left;
+}
+  
+.officer-card {
+    width: 150px;
+    text-align: center;
+}
+  
+.officer-img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+  
+.officer-info {
+    margin-top: 0.5rem;
+    color: black;
+}
+
+.officer-role{
+    margin-top: 0.5rem;
+}

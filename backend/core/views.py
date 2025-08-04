@@ -6,6 +6,7 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django.http import JsonResponse
 from .models import Event
+from .models import Officer
 
 def home(request):
     return render(request, 'core/index.html')
@@ -16,9 +17,6 @@ def about(request):
 def events(request):
     all_events = Event.objects.order_by('date')
     return render(request, 'core/events.html')
-
-def officers(request):
-    return render(request, 'core/officers.html')
 
 def contact(request):
     return render(request, 'core/contact.html')
@@ -51,3 +49,7 @@ def calendar_snippet(request):
 def get_events(request):
     events = Event.objects.all().values('title', 'date', 'description')
     return JsonResponse(list(events), safe=False)
+
+def officers_view(request):
+    officers = Officer.objects.all().order_by('group')
+    return render(request, 'core/officers.html', {'officers': officers})
