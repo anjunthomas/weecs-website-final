@@ -7,16 +7,15 @@
   <div class="hero-content">
     <h1 class="animate__animated animate__fadeInDown animate__slow ">Women In Electrical Engineering<br>And Computer Science</h1>
     <p id="typewriter" class="hero-paragraph blinking-cursor"></p>
-    <a href="{% url 'about' %}" class="hero-button animate__animated animate__fadeInDown animate__slow " style="animation-delay: 0.5s;">Join Us!</a>
+    <a href="{% url 'links' %}" class="hero-button animate__animated animate__fadeInDown animate__slow " style="animation-delay: 0.5s;">Join Us!</a>
   </div>
 </section>
 
 <section class="calendar-section">
 
-  <!-- React mounting point -->
   <div id="react-root"></div>
 
-  <!-- Link to Vite-generated React assets -->
+  <!-- vite generated react assets -->
   <link rel="stylesheet" href="{% vite_asset 'src/main.jsx' 'css' %}">
   <script src="{% static 'scripts/typewriter.js' %}"></script>
   <script type="module" src="{% vite_asset 'src/main.jsx' %}"></script>

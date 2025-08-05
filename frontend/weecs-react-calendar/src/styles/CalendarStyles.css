@@ -137,5 +137,24 @@
   line-height: 1.5;
 }
 
+.event-date {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
 
+.event-date-value{
+  font-family: 'Fira Code', monospace;
+  color: #20c461;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+
+.event-no-event {
+  font-family: 'Fira Code', monospace;
+  color: #20c461;
+  margin: 0;
+  font-size: 0.2rem;
+}

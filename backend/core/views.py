@@ -53,3 +53,6 @@ def get_events(request):
 def officers_view(request):
     officers = Officer.objects.all().order_by('group')
     return render(request, 'core/officers.html', {'officers': officers})
+
+def links_view(request):
+    return render(request, 'core/links.html')

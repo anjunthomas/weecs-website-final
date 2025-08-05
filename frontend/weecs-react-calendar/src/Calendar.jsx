@@ -40,14 +40,18 @@ function MyCalendar() {
       />
 
       <div className="selected-event">
-        <p><strong>Date:</strong> {value.toDateString()}</p>
+        <div className="event-date">
+          <p className="event-date-value">{value.toDateString()}</p>
+        </div>
+
+        
         {selectedEvent ? (
           <div className="event-details">
             <h3>{selectedEvent.title}</h3>
             {selectedEvent.description && <p>{selectedEvent.description}</p>}
           </div>
         ) : (
-          <p>No events on this date.</p>
+          <p className="event-no-event">No events scheduled</p>
         )}
       </div>
     </div>

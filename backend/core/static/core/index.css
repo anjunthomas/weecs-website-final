@@ -5,6 +5,9 @@ header {
   top: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: #f3f3f8;
@@ -15,6 +18,10 @@ body {
 html, body {
   width: 100%;
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .navbar-wrapper {
@@ -91,8 +98,8 @@ html, body {
   font-family: "Poppins", sans-serif;
   margin-bottom: 0.5rem;
   text-shadow:
-    0 0 5px #Fd3db5,
-    0 0 10px #db739c,
+    0 0 8px #Fd3db5,
+    0 0 15px #db739c,
     0 0 2px rgba(255, 255, 255, 0.3),
     0 0 4px rgba(255, 255, 255, 0.7);
 }
@@ -126,6 +133,7 @@ html, body {
   color: #fff;
   padding: 1rem 2.5rem;
   font-weight: bold;
+  font-size: 1.25rem; 
   margin-bottom: 3rem;
   border-radius: 8px;
   text-decoration: none;
@@ -234,3 +242,4 @@ html, body {
   }
 
 }
+

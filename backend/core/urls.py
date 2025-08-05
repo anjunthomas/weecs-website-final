@@ -13,5 +13,6 @@ urlpatterns = [
     path('calendar-snippet/', views.calendar_snippet, name='calendar-snippet'),
     path('api/events/', views.get_events, name='get_events'),
     path('officers/', views.officers_view, name='officers'),
+    path('links/', views.links_view, name='links'),
 ]
 
