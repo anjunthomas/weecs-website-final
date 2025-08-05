@@ -1,19 +1,56 @@
 
 
-/* this is the calendar */
 .react-calendar {
   background-color: #f3f3f8;
   border-radius: 10px;
   color: black;
-  z-index: 0;
+  margin: 0 auto;
   transform: scale(1.1);
   transform-origin: center;
-  margin: 0 auto;
-} 
+}
+
+
+.react-calendar__tile{
+  position: relative;
+}
+
 
 .react-calendar__tile--now {
-  background: #e7cede;
+  background: #d6d6d6;
   color: white;
+  border-radius: 0.5rem;
+}
+
+.react-calendar__tile--active {
+  background: transparent;
+  color: inherit;
+}
+
+.react-calendar__tile--now.react-calendar__tile--active {
+  background: #d6d6d6; 
+  color: white;
+}
+
+/* to get rid of the react default red color for weekends */
+.react-calendar__month-view__days__day--weekend {
+  color: #333;
+  font-weight: normal;
+}
+
+.circle-indicator {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #f0c6d6;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  color: #b41938;
+  font-weight: bold;
+}
+
+.react-calendar__tile.hide-default abbr {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -21,7 +58,6 @@
     transform: scale(1);
   }
 }
-
 
 .title{
     font-size: 4rem;
@@ -70,18 +106,6 @@
   font-size: 4rem;
 }
 
-.highlight {
-  background-color: #f0c6d6 !important;
-  border-radius: 75% !important;;
-  font-weight: bold;
-  color: #7c2645 !important;
-}
-
-@property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
 
 .selected-event {
   margin-top: 2rem;
@@ -113,14 +137,5 @@
   line-height: 1.5;
 }
 
-/*
-@keyframes spin{
-    from {
-        --angle: 0deg;
-    }
-    to {
-        --angle: 360deg;
-    }
-}
-*/
+
 
