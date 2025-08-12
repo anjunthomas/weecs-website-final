@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Calendar from 'react-calendar';
+import Calendar from 'react-calendar'; // this is a built in react library
 import 'react-calendar/dist/Calendar.css';
 import './styles/CalendarStyles.css';
 

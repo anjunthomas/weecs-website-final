@@ -1,0 +1,39 @@
+.about-card{
+    background-color: #ffffff;
+    padding: 2rem 2rem;
+    max-width: 1100px; /* limiting the length of the line */
+    margin: 0 auto; /* centering */
+}
+
+.about-section {
+    background-color: #fdf7f9;
+    padding: 2rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto; 
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.about-header{
+    font-family: 'Playfair Display', serif;
+    color: #7a1f4f;
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 0.5rem;
+    line-height: 1.2;
+    max-width: 900px;
+    margin: 0 auto 0.5rem;
+}
+
+.about-body{
+    font-family: 'Lora', serif;
+    color: #444444  ;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-align: center;
+    padding: 3.5rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}

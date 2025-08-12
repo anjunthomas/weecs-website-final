@@ -5,6 +5,7 @@ import './styles/CalendarStyles.css'
 import 'react-calendar/dist/Calendar.css';
 import './index.css';
 import './styles/LightningBolt.css';
+import About from './About';
 
 
 

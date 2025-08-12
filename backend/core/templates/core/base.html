@@ -30,12 +30,7 @@
       <div class="logo">WEECS</div>
       <ul class="nav-links">
         <li><a href="{% url 'home' %}">HOME</a></li>
-       <li><a 
-          href="{% url 'about' %}" 
-          hx-get="{% url 'about' %}" 
-          hx-target="#main-content" 
-          hx-push-url="true"
-        >ABOUT</a></li>
+        <li><a href="{% url 'home' %}#about-route">ABOUT</a></li>
         <li><a href="{% url 'home' %}#calendar-section">EVENTS</a></li>
         <li><a href="{% url 'officers' %}">OFFICERS</a></li>
         <li><a href="{% url 'gallery' %}">GALLERY</a></li>

@@ -13,6 +13,7 @@
     top: 200px;
     bottom: 20px;
     right: 20px;
+    z-index: 2;
 }
 
 .right-bolt {
@@ -21,22 +22,26 @@
     bottom: 40px;
     top: 400px;
     left: 200px;
+    z-index: 2;
 }
 
 .middle-bolt {
-    position: absolute;
     left: 75%;
     top: 30%;
     transform: translate(-50%, -50%);
-    z-index: 1000;
+    z-index: 2;
 }
 
 .cosmo-mind {
-    position: absolute;
     left: 90%;
     top: 60%;
     transform: translate(-50%, -50%);
-    z-index: 1000;
+    z-index: 2;
+}
+
+.left-bolt, .right-bolt, .lightning-bolt {
+    position: absolute;
+    pointer-events: none;
 }
 
 
