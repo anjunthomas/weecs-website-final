@@ -15,7 +15,7 @@ export default function Gallery() {
   return (
     <ImageGallery
       items={items}
-      showThumbnails={true}   // or true if you want thumbs
+      showThumbnails={true} 
       showBullets={true}
       showNav={true}
       showPlayButton={false}
