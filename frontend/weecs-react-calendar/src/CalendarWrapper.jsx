@@ -64,8 +64,8 @@ const CalendarComponent = () => {
         <MyCalendar />
       </div>
        <LightningBolt className="lightning-bolt left-bolt" />
-     {/* <LightningBolt className="lightning-bolt middle-bolt" />
-      <CosmoMind className="lightning-bolt cosmo-mind"/> */}
+      <LightningBolt className="lightning-bolt middle-bolt" />
+      <LightningBolt className="lightning-bolt bottom-right-bolt" />
     </div>
     
     </>

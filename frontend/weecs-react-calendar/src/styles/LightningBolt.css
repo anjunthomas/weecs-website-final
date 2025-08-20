@@ -7,41 +7,32 @@
     height: auto;
 }
 
-.left-bolt {
-    position: absolute;
-    left: 40px;
-    top: 200px;
-    bottom: 20px;
-    right: 20px;
-    z-index: 2;
+.lightning-bolt {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  pointer-events: none;
+  animation: float-lightning 3s ease-in-out infinite;
 }
 
-.right-bolt {
+.left-bolt  { top: 200px; left: 40px; }
+
+.right-bolt { top: 200px; right: 40px; }
+
+.bottom-right-bolt{
     position: absolute;
     right: 40px;
     bottom: 40px;
-    top: 400px;
+    top: 600px;
     left: 200px;
     z-index: 2;
 }
 
-.middle-bolt {
-    left: 75%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.cosmo-mind {
-    left: 90%;
-    top: 60%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.left-bolt, .right-bolt, .lightning-bolt {
+.middle-bolt{
     position: absolute;
-    pointer-events: none;
+    right: 40px;
+    bottom: 40px;
+    z-index: 2;
 }
 
 
