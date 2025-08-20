@@ -26,7 +26,12 @@ html {
 
 .navbar-wrapper {
   padding: 0.5rem;
-  background-color: #f0c6d6;
+  background-color: #fff;        
+}
+
+/* only applies to homepage */
+.home .navbar-wrapper {
+  background-color: #f0c6d6;    
 }
 
 .navbar {

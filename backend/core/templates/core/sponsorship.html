@@ -1,5 +1,40 @@
 {% extends 'core/base.html' %}
-<div class="row">
-  <div class="column"></div>
-  <div class="column"></div>
-</div>
+{% load static %}
+
+{% block title %}Sponsorship – WEECS{% endblock %}
+
+{% block head %}
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'core/sponsorship.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="sps-container">
+    <h1 class="sps-title">Sponsorship</h1>
+    <p class="sps-intro">
+      Thank you for your interest in sponsoring UCF Women in Electrical Engineering and Computer Science!
+      <br> We're excited to have you involved in our mission in empowering women to reach their full potential as
+      engineers. <br> Here is a packet with more information on how to support our goal. 
+    </p>
+
+    <section class="sps-embed">
+      <div class="sps-frame">
+        <object data="{% static 'pdfs/weecs-sponsorship-packet-25-26.pdf' %}" type="application/pdf" class="sps-object">
+          <div class="sps-fallback">
+            Your browser can’t display the PDF inline.
+            <a href="{% static 'pdfs/weecs-sponsorship-packet-25-26.pdf' %}" target="_blank" rel="noopener">Open it in a new tab</a>.
+          </div>
+        </object>
+      </div>
+    </section>
+
+    <div class="sps-download">
+      <span class="sps-arrow" aria-hidden="true">⬇</span>
+      <a href="{% static 'pdfs/weecs-sponsorship-packet.pdf' %}" download="WEECS-Sponsorship-Packet.pdf" class="sps-link">
+        Download Sponsorship Packet (PDF)
+      </a>
+    </div>
+
+    <p class="sps-mobile-hint">On mobile, use the download link above to view the packet.</p>
+  </div>
+{% endblock %}

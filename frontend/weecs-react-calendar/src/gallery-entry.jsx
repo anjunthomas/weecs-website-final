@@ -6,6 +6,7 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 const root = createRoot(document.getElementById('gallery-root'));
 root.render(
   <React.StrictMode>
+    <h1 className="gallery-title"> Gallery </h1>
     <Gallery />
   </React.StrictMode>
 );
