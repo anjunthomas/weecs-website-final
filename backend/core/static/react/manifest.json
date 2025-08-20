@@ -1,9 +1,28 @@
 {
+  "_client-BJa_XCzv.js": {
+    "file": "assets/client-BJa_XCzv.js",
+    "name": "client"
+  },
+  "src/gallery-entry.jsx": {
+    "file": "assets/gallery-C3QU8AMq.js",
+    "name": "gallery",
+    "src": "src/gallery-entry.jsx",
+    "isEntry": true,
+    "imports": [
+      "_client-BJa_XCzv.js"
+    ],
+    "css": [
+      "assets/gallery-ZThX0bKD.css"
+    ]
+  },
   "src/main.jsx": {
-    "file": "assets/main-CnoFkihp.js",
+    "file": "assets/main-C4danjxN.js",
     "name": "main",
     "src": "src/main.jsx",
     "isEntry": true,
+    "imports": [
+      "_client-BJa_XCzv.js"
+    ],
     "css": [
       "assets/main-Dbfo7PAr.css"
     ]

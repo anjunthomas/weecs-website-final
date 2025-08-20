@@ -9,7 +9,10 @@ export default defineConfig({
     outDir: '../../backend/core/static/react',
     emptyOutDir: true,
     rollupOptions: {
-      input: resolve(__dirname, 'src/main.jsx'),
+      input: {
+        main: resolve(__dirname, 'src/main.jsx'),
+        gallery: resolve(__dirname, 'src/gallery-entry.jsx'),
+      },
     },
   },
 })

@@ -1,4 +1,6 @@
 from django.db import models
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFill
 
 class Event(models.Model):
     title = models.CharField(max_length=200)
@@ -22,3 +24,21 @@ class Officer(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.role}"
+    
+
+class Photo(models.Model):
+    title = models.CharField(max_length=200, blank=True)
+    image = models.ImageField(upload_to='photos/%Y/%m/')
+    # auto-generated (on first access) 250x150 thumbnail
+    thumb = ImageSpecField(
+        source='image',
+        processors=[ResizeToFill(250, 150)],
+        format='JPEG',
+        options={'quality': 75},
+    )
+    is_published = models.BooleanField(default=True)
+    sort_order = models.PositiveIntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ("sort_order", "-created_at")
