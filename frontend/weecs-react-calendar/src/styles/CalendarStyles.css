@@ -160,3 +160,11 @@
   margin: 0;
   font-size: 0.2rem;
 }
+
+.chameleon {
+  display: block;               /* so it's not inline */
+  margin: 2rem auto;            /* centers inside the about card */
+  max-width: 240px;             /* resize as you like */
+  height: auto;
+  animation: float-lightning 3s ease-in-out infinite;
+}

@@ -9,8 +9,6 @@
 
 .lightning-bolt {
   position: absolute;
-  width: 100px;
-  height: auto;
   pointer-events: none;
   animation: float-lightning 3s ease-in-out infinite;
 }
@@ -64,5 +62,16 @@
 
 .lightning-bolt {
     animation: float-lightning 3s ease-in-out infinite;
+}
+
+.chameleon { 
+    position: absolute; 
+    margin: 0; /* centers in the about card */ 
+    max-width: 620px; /* size as you like */ 
+    height: auto; 
+    animation: float-lightning 3s ease-in-out infinite;
+    bottom: -15rem;
+    right: -17rem;
+    z-index: 10;
 }
 
