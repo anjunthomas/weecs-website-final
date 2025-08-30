@@ -67,7 +67,7 @@
 .chameleon { 
     position: absolute; 
     margin: 0;
-    max-width: 620px;
+    max-width: 310px;
     height: auto; 
     animation: float-lightning 3s ease-in-out infinite;
     bottom: -2rem;  
