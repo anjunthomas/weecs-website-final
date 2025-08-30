@@ -76,7 +76,7 @@ html {
   color: #f0c6d6;
 }
 
-/* Hamburger menu styles */
+/* hamburger menu styles */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -143,8 +143,9 @@ html {
 }
 
 .hero p {
-  white-space: pre-wrap; 
+  white-space: normal;
   overflow-wrap: break-word;
+  word-wrap: break-word;
   overflow: hidden;
   border-right: 3px solid #4a1c2b;
   font-size: 2rem; 
@@ -156,6 +157,7 @@ html {
   font-weight: 700;
   line-height: 1.6;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .blinking-cursor::after {
@@ -228,6 +230,53 @@ html {
   }
 }
 
+footer {
+  background-color: #000 !important;
+  color: #fff !important;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: auto;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer p {
+  margin: 0 !important;
+  font-size: 1rem !important;
+  color: #fff !important;
+  font-weight: 500;
+}
+
+/* Calendar mobile color fixes */
+@media (max-width: 768px) {
+  /* Keep calendar text black on mobile */
+  .react-calendar button {
+    color: #333 !important;
+  }
+  
+  .react-calendar__navigation button {
+    color: #333 !important;
+  }
+  
+  .react-calendar__month-view__weekdays__weekday {
+    color: #333 !important;
+  }
+  
+  .react-calendar__month-view__days__day {
+    color: #333 !important;
+  }
+  
+  /* Keep navigation arrows and month/year black */
+  .react-calendar__navigation__label {
+    color: #333 !important;
+  }
+  
+  .react-calendar__navigation__arrow {
+    color: #333 !important;
+  }
+}
+
 /* Mobile responsiveness improvements */
 @media (max-width: 768px) {
   /* Show hamburger menu */
@@ -235,7 +284,6 @@ html {
     display: flex;
   }
   
-  /* Hide regular nav links initially and make them slide-in menu */
   .nav-links {
     position: fixed;
     top: 0;
@@ -252,7 +300,6 @@ html {
     z-index: 999;
   }
   
-  /* Show nav links when menu is active */
   .nav-links.active {
     right: 0;
   }
@@ -263,7 +310,6 @@ html {
     color: #666674;
   }
   
-  /* Navigation adjustments */
   .navbar {
     padding: 1em 2em;
     justify-content: space-between;
@@ -273,7 +319,6 @@ html {
     position: static;
   }
   
-  /* Hero section - CENTER THE TEXT PROPERLY */
   .hero {
     padding: 2em 1em;
     display: flex;
@@ -303,12 +348,15 @@ html {
   .hero p,
   .hero-paragraph {
     font-size: 1.3rem;
-    padding: 1rem 0.5rem;
-    letter-spacing: 1px;
+    padding: 1rem 1rem;
+    letter-spacing: 0.5px;
     text-align: center;
-    width: 100%;
+    width: calc(100% - 2rem);
     margin: 0 auto 2rem;
-    max-width: 100%;
+    max-width: calc(100vw - 3rem);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
   }
 
   .hero-button {
@@ -352,8 +400,17 @@ html {
   .hero-paragraph {
     font-size: 1rem;
     letter-spacing: 0.5px;
-    padding: 0.5rem;
+    padding: 1rem 1rem;
     line-height: 1.4;
+    width: calc(100% - 2rem);
+    margin: 0 auto 2rem;
+    max-width: calc(100vw - 2.5rem);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: normal;
+    overflow: hidden;
   }
   
   .hero-button {
