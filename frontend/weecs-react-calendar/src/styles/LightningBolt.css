@@ -67,10 +67,10 @@
 .chameleon { 
     position: absolute; 
     margin: 0;
-    width: 350px;
+    width: 400px;
     height: auto; 
     animation: float-lightning 3s ease-in-out infinite;
-    bottom: -3rem;  
+    bottom: -1rem;  
     right: -11rem;
     z-index: 10;
 }
@@ -109,6 +109,7 @@
   .chameleon {
     width: 250px;
     right: -2rem;
+    bottom: -1rem;
   }
   
   .lightning-bolt {
