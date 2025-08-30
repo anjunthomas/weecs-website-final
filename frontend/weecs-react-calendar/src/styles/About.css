@@ -5,7 +5,7 @@
     margin: 0 auto;
     position: relative;
     overflow: visible;
-    padding: 2rem 8rem 2rem 2rem;
+    padding: 2rem 5rem 2rem 2rem;
 }
 
 .about-section {
@@ -18,7 +18,7 @@
     text-align: center;
     position: relative;
     overflow: visible;
-    padding-bottom: 14rem; /* added this padding to make space for chameleon */
+    padding-bottom: 18rem; /* added this padding to make space for chameleon */
 }
 
 .about-header{
