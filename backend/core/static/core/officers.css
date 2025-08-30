@@ -42,3 +42,28 @@ body {
 .officer-role{
     margin-top: 0.5rem;
 }
+
+@media (max-width: 768px) {
+  .officers-grid {
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .officer-card {
+    width: 180px; /* slightly bigger for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .officers-grid {
+    gap: 1.5rem;
+  }
+  
+  .officer-card {
+    width: 160px;
+  }
+  
+  .group-title {
+    font-size: 1.5rem;
+  }
+}

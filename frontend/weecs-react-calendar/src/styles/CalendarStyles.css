@@ -1,4 +1,4 @@
-
+/* Calendar Styles - Desktop preserved, mobile optimized */
 
 .react-calendar {
   background-color: #f3f3f8;
@@ -9,11 +9,9 @@
   transform-origin: center;
 }
 
-
-.react-calendar__tile{
+.react-calendar__tile {
   position: relative;
 }
-
 
 .react-calendar__tile--now {
   background: #d6d6d6;
@@ -31,7 +29,7 @@
   color: white;
 }
 
-/* to get rid of the react default red color for weekends */
+/* Remove default red color for weekends */
 .react-calendar__month-view__days__day--weekend {
   color: #333;
   font-weight: normal;
@@ -53,18 +51,6 @@
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .react-calendar {
-    transform: scale(1);
-  }
-}
-
-.title{
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
 .calendar-container p {
   margin-top: 1.5rem;
   font-size: 1rem;
@@ -74,7 +60,7 @@
   align-items: center;
 }
 
-/* calendar itself */
+/* Calendar itself */
 .calendar-box {
   display: flex;
   justify-content: center;
@@ -89,19 +75,14 @@
   z-index: auto;
 }
 
-.calendar-section1 {
-  flex-shrink: 0;
-  margin-bottom: 1.5rem;
-}
-
-/* section surrounding the calendar, header */
+/* Section surrounding the calendar, header */
 #calendar-section {
   color: #9f4e69;
   background-color: #fdf7f9;
   padding: 3rem 1rem;
   margin-top: 2rem;
   position: relative;
-  overflow: visible; /* to make it a stacking section */
+  overflow: visible;
   z-index: auto;
 }
 
@@ -145,10 +126,9 @@
   margin-bottom: 1rem;
 }
 
-
-.event-date-value{
+.event-date-value {
   font-family: 'Fira Code', monospace;
-  color: #20c461;
+  color: #7c2645;
   margin: 0;
   font-size: 1.1rem;
   font-weight: 400;
@@ -156,15 +136,69 @@
 
 .event-no-event {
   font-family: 'Fira Code', monospace;
-  color: #20c461;
+  color: #7c2645;
   margin: 0;
-  font-size: 0.2rem;
+  font-size: 1rem; /* Fixed from 0.2rem */
 }
 
-.chameleon {
-  display: block;               /* so it's not inline */
-  margin: 2rem auto;            /* centers inside the about card */
-  max-width: 240px;             /* resize as you like */
-  height: auto;
-  animation: float-lightning 3s ease-in-out infinite;
+/* Mobile Responsive - Desktop appearance preserved */
+@media screen and (max-width: 768px) {
+  .react-calendar {
+    transform: scale(1);
+  }
+  
+  .calendar-section-title {
+    font-size: 2.5rem;
+  }
+  
+  #calendar-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .event-details {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .calendar-section-title {
+    font-size: 2rem;
+  }
+  
+  .react-calendar {
+    transform: scale(0.9);
+  }
+  
+  .circle-indicator {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+  }
+  
+  .event-details {
+    padding: 0.75rem;
+  }
+  
+  .event-details h3 {
+    font-size: 1.25rem;
+  }
+  
+  .event-details p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .calendar-section-title {
+    font-size: 1.5rem;
+  }
+  
+  .react-calendar {
+    transform: scale(0.8);
+  }
+  
+  #calendar-section {
+    padding: 1.5rem 0.25rem;
+  }
 }

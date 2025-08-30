@@ -74,3 +74,14 @@
   }
 }
 .sps-mobile-hint { display: none; }
+
+@media (max-width: 480px) {
+  .sps-title {
+    font-size: 2.2rem; /* scale down further */
+  }
+  
+  .sps-intro {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+}

@@ -1,10 +1,16 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
+{% block head %}
+<link rel="stylesheet" href="{% static 'core/links.css' %}">
+{% endblock %}
+
 {% block content %}
-<div class="links-page">
+<div class="links-container">
   <h1>Connect With Us</h1>
-  <p><a href="https://discord.gg/UNDjBB2m" target="_blank" class="hero-button">Join Our Discord</a></p>
-  <p><a href="https://www.instagram.com/weecsucf/" target="_blank" class="hero-button">Our Instagram 💖</a></p>
+  <div class="buttons-wrapper">
+    <a href="https://discord.gg/RXvH2MsP" target="_blank" class="hero-button">Join Our Discord</a>
+    <a href="https://www.instagram.com/weecsucf/" target="_blank" class="hero-button">Our Instagram 💖</a>
+  </div>
 </div>
 {% endblock %}

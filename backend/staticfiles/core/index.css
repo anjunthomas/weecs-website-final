@@ -5,9 +5,12 @@ header {
   top: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  color: #f3f3f8;
+  color: #fdf7f9;
   margin: 0;
   padding: 0;
 }
@@ -17,9 +20,18 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar-wrapper {
   padding: 0.5rem;
-  background-color: #f0c6d6;
+  background-color: #fff;        
+}
+
+/* only applies to homepage */
+.home .navbar-wrapper {
+  background-color: #f0c6d6;    
 }
 
 .navbar {
@@ -91,10 +103,10 @@ html, body {
   font-family: "Poppins", sans-serif;
   margin-bottom: 0.5rem;
   text-shadow:
-    0 0 5px #Fd3db5,
-    0 0 10px #db739c,
-    0 0 1px rgba(255, 255, 255, 0.3),
-    0 0 2px rgba(255, 255, 255, 0.7);
+    0 0 8px #Fd3db5,
+    0 0 15px #db739c,
+    0 0 2px rgba(255, 255, 255, 0.3),
+    0 0 4px rgba(255, 255, 255, 0.7);
 }
 
 .hero p {
@@ -102,8 +114,8 @@ html, body {
   overflow-wrap: break-word;
   overflow: hidden;
   border-right: 3px solid #4a1c2b;
-  font-size: 1.5rem; 
-  color: #4a1c2b;     
+  font-size: 2rem; 
+  color: #4a281c;     
   font-family: 'Poppins', sans-serif;
   letter-spacing: 2px;
   margin: 0 auto 2rem;
@@ -124,8 +136,9 @@ html, body {
 .hero-button {
   background-color: #822a4d;
   color: #fff;
-  padding: 0.75rem 2rem;
+  padding: 1rem 2.5rem;
   font-weight: bold;
+  font-size: 1.25rem; 
   margin-bottom: 3rem;
   border-radius: 8px;
   text-decoration: none;
@@ -215,8 +228,31 @@ html, body {
   }
 }
 
-/* for half screens */
+/* mobile responsibleness */
 @media (max-width: 768px) {
+  /* Navigation */
+  .navbar {
+    padding: 1em;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .logo {
+    position: static;
+    margin-bottom: 0.5rem;
+  }
+  
+  .nav-links {
+    gap: 1.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  
+  /* Hero section */
   .hero h1 {
     font-size: 2.5rem;
     padding: 1.5rem 1.5rem;
@@ -232,5 +268,41 @@ html, body {
     padding: 0.6rem 1.5rem;
     font-size: 0.95rem;
   }
+  
+  /* Other sections */
+  .mission, .highlights {
+    padding: 2em 1em;
+  }
+}
 
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8em;
+  }
+  
+  .nav-links {
+    gap: 1em;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 0.3rem 0;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
 }
