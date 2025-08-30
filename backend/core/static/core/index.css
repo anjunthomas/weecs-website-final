@@ -20,16 +20,11 @@ html, body {
   overflow-x: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .navbar-wrapper {
   padding: 0.5rem;
   background-color: #fff;        
 }
 
-/* only applies to homepage */
 .home .navbar-wrapper {
   background-color: #f0c6d6;    
 }
@@ -76,7 +71,7 @@ html {
   color: #f0c6d6;
 }
 
-/* hamburger menu styles */
+/* Hamburger menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -145,8 +140,6 @@ html {
 .hero p {
   white-space: normal;
   overflow-wrap: break-word;
-  word-wrap: break-word;
-  overflow: hidden;
   border-right: 3px solid #4a1c2b;
   font-size: 2rem; 
   color: #4a281c;     
@@ -158,6 +151,12 @@ html {
   line-height: 1.6;
   width: 100%;
   box-sizing: border-box;
+}
+
+@media (min-width: 769px) {
+  .hero p {
+    white-space: pre-line;
+  }
 }
 
 .blinking-cursor::after {
@@ -173,11 +172,15 @@ html {
   padding: 1rem 2.5rem;
   font-weight: bold;
   font-size: 1.25rem; 
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem;
+  margin-left: calc(45% - 1rem);
+  margin-right: auto;
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s ease;
   font-family: "Fira Code", monospace;
+  display: block;
+  width: fit-content;
 }
 
 .hero-button:hover {
@@ -185,7 +188,6 @@ html {
   transform: scale(1.05);
 }
 
-/*for hero fade in transition*/
 .animate__slow { 
   animation-duration: 10s;
 }
@@ -196,43 +198,10 @@ html {
   gap: 1.5em;
 }
 
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(130, 42, 77, 0.7);
-  }
-
-  70% {
-    box-shadow: 0 0 0 10px rgba(130, 42, 77, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(130, 42, 77, 0.5);
-  }
-}
-
-@keyframes bounce {
-  from {
-    transform: translateX(-50vw);
-  }
-  to {
-    transform: translateX(50vw);
-  }
-}
-
-@keyframes cursor {
-  50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
+/* Footer - pink background, black text */
 footer {
-  background-color: #000 !important;
-  color: #fff !important;
+  background-color: #ffffff;
+  color: #000;
   text-align: center;
   padding: 2rem 1rem;
   margin-top: auto;
@@ -242,44 +211,20 @@ footer {
 }
 
 footer p {
-  margin: 0 !important;
-  font-size: 1rem !important;
-  color: #fff !important;
+  margin: 0;
+  font-size: 1rem;
+  color: #000;
   font-weight: 500;
 }
 
-/* Calendar mobile color fixes */
-@media (max-width: 768px) {
-  /* Keep calendar text black on mobile */
-  .react-calendar button {
-    color: #333 !important;
-  }
-  
-  .react-calendar__navigation button {
-    color: #333 !important;
-  }
-  
-  .react-calendar__month-view__weekdays__weekday {
-    color: #333 !important;
-  }
-  
-  .react-calendar__month-view__days__day {
-    color: #333 !important;
-  }
-  
-  /* Keep navigation arrows and month/year black */
-  .react-calendar__navigation__label {
-    color: #333 !important;
-  }
-  
-  .react-calendar__navigation__arrow {
-    color: #333 !important;
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }
 
-/* Mobile responsiveness improvements */
+/* Mobile Styles */
 @media (max-width: 768px) {
-  /* Show hamburger menu */
   .hamburger {
     display: flex;
   }
@@ -325,44 +270,32 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
   }
   
   .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    max-width: 100%;
     width: 100%;
   }
   
   .hero h1 {
     font-size: 2.5rem;
     padding: 1rem 0.5rem;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
   }
 
-  .hero p,
-  .hero-paragraph {
+  .hero p {
     font-size: 1.3rem;
-    padding: 1rem 1rem;
+    padding: 1rem;
     letter-spacing: 0.5px;
-    text-align: center;
     width: calc(100% - 2rem);
-    margin: 0 auto 2rem;
     max-width: calc(100vw - 3rem);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    box-sizing: border-box;
+    border-right: none !important;
   }
 
   .hero-button {
     padding: 0.8rem 2rem;
     font-size: 1rem;
-    align-self: center;
   }
 }
 
@@ -379,11 +312,6 @@ footer p {
     width: 80%;
   }
   
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 1em;
-  }
-  
   .hero {
     padding: 1.5em 0.5em;
     height: auto;
@@ -396,25 +324,20 @@ footer p {
     line-height: 1.1;
   }
   
-  .hero p,
-  .hero-paragraph {
+  .hero p {
     font-size: 1rem;
-    letter-spacing: 0.5px;
-    padding: 1rem 1rem;
-    line-height: 1.4;
-    width: calc(100% - 2rem);
-    margin: 0 auto 2rem;
-    max-width: calc(100vw - 2.5rem);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    box-sizing: border-box;
-    text-align: center;
-    white-space: normal;
-    overflow: hidden;
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
+    max-width: calc(100vw - 2rem);
   }
   
   .hero-button {
     padding: 0.7rem 1.5rem;
     font-size: 0.9rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
   }
 }

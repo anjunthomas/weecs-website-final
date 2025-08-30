@@ -67,20 +67,21 @@
 .chameleon { 
     position: absolute; 
     margin: 0;
-    max-width: 310px;
+    width: 400px;
     height: auto; 
     animation: float-lightning 3s ease-in-out infinite;
-    bottom: -2rem;  
-    right: -15rem;
+    bottom: -1rem;  
+    right: -11rem;
     z-index: 10;
 }
 
 @media (max-width: 768px) {
   .chameleon {
+    width: 200px;
     right: -5rem;
-    max-width: 450px;
     bottom: -1rem;
   }
+  
   
   .lightning-bolt {
     width: 60px;
@@ -106,8 +107,8 @@
 
 @media (max-width: 480px) {
   .chameleon {
-    right: -5rem;
-    max-width: 200px;
+    width: 150px;
+    right: -3rem;
   }
   
   .lightning-bolt {
