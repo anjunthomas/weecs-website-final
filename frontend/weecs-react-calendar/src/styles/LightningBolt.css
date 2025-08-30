@@ -107,7 +107,7 @@
 @media (max-width: 480px) {
   .chameleon {
     right: -5rem;
-    max-width: 300px;
+    max-width: 150px;
   }
   
   .lightning-bolt {
