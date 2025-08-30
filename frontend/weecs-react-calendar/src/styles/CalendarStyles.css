@@ -29,7 +29,7 @@
   color: white;
 }
 
-/* Remove default red color for weekends */
+/* remove default red color for weekends */
 .react-calendar__month-view__days__day--weekend {
   color: #333;
   font-weight: normal;
@@ -75,7 +75,7 @@
   z-index: auto;
 }
 
-/* Section surrounding the calendar, header */
+/* section surrounding the calendar, header */
 #calendar-section {
   color: #9f4e69;
   background-color: #fdf7f9;
@@ -141,8 +141,32 @@
   font-size: 1rem; /* Fixed from 0.2rem */
 }
 
-/* Mobile Responsive - Desktop appearance preserved */
+/* mobile responsiveness */
 @media screen and (max-width: 768px) {
+  .react-calendar button {
+    color: #333 !important;
+  }
+  
+  .react-calendar__navigation button {
+    color: #333 !important;
+  }
+  
+  .react-calendar__month-view__weekdays__weekday {
+    color: #333 !important;
+  }
+  
+  .react-calendar__month-view__days__day {
+    color: #333 !important;
+  }
+
+  .react-calendar__navigation__label {
+    color: #333 !important;
+  }
+  
+  .react-calendar__navigation__arrow {
+    color: #333 !important;
+  }
+  
   .react-calendar {
     transform: scale(1);
   }
@@ -162,6 +186,14 @@
 }
 
 @media screen and (max-width: 480px) {
+  .react-calendar button {
+    color: #333 !important;
+  }
+  
+  .react-calendar__navigation button {
+    color: #333 !important;
+  }
+  
   .calendar-section-title {
     font-size: 2rem;
   }
@@ -190,6 +222,10 @@
 }
 
 @media screen and (max-width: 320px) {
+  .react-calendar button {
+    color: #333 !important;
+  }
+  
   .calendar-section-title {
     font-size: 1.5rem;
   }
