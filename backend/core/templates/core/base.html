@@ -16,7 +16,7 @@
 
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter&family=Poppins:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
     <title>{% block title %}WEECS{% endblock %}</title>
@@ -35,6 +35,11 @@
         <li><a href="{% url 'officers' %}">OFFICERS</a></li>
         <li><a href="{% url 'sponsorship' %}">SPONSORSHIP</a></li>
       </ul>
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   </header>
 
@@ -45,5 +50,38 @@
   <footer>
     <p>&copy; 2025 Women in EECS at UCF</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      const hamburger = document.querySelector('.hamburger');
+      
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    }
+
+    // close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+        
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const navLinks = document.querySelector('.nav-links');
+      const hamburger = document.querySelector('.hamburger');
+      const navbar = document.querySelector('.navbar');
+      
+      if (!navbar.contains(e.target)) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
