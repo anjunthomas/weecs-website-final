@@ -295,7 +295,7 @@ footer p {
 
   .hero p {
     font-size: 1.3rem;
-    padding: 1rem;
+    padding: 1.5rem;
     letter-spacing: 0.5px;
     width: calc(100% - 2rem);
     max-width: calc(100vw - 3rem);

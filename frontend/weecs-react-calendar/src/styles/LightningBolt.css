@@ -67,10 +67,10 @@
 .chameleon { 
     position: absolute; 
     margin: 0;
-    width: 400px;
+    width: 350px;
     height: auto; 
     animation: float-lightning 3s ease-in-out infinite;
-    bottom: -1rem;  
+    bottom: -3rem;  
     right: -11rem;
     z-index: 10;
 }
