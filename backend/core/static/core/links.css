@@ -1,21 +1,42 @@
-/* Links page styles */
 .links-container {
-  background-color: #fdf7f9;
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 3rem 2rem;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fdf7f9 0%, #f8f0f3 50%, #f0e6ea 100%);
+  border-radius: 20px;
+  margin: 2rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
 }
 
 .links-container h1 {
-  color: #9f4e69;
-  font-size: 4rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  text-align: center;
+  color: #6b2c40;
+  font-size: 3rem;
   margin-bottom: 3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(107, 44, 64, 0.1);
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.links-container .hero-button {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.links-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 3px;
+  background: linear-gradient(90deg, #f0c6d6, #d4a5c0);
+  border-radius: 2px;
 }
 
 .buttons-wrapper {
@@ -25,26 +46,43 @@
   align-items: center;
 }
 
-/* need to override the styles of the hero button. It is invisible when it should be visible*/
-.links-container .hero-button {
-  opacity: 1 !important;
-  visibility: visible !important;
-  background-color: #822a4d;
-  color: #fff;
-  padding: 1.2rem 3rem;
-  font-weight: bold;
-  font-size: 1.3rem;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-family: "Fira Code", monospace;
+.buttons-wrapper .hero-button {
   display: block;
-  width: fit-content;
+  width: 300px;
   text-align: center;
-  min-width: 250px;
 }
 
-.links-container .hero-button:hover {
-  background-color: #Fd3db5;
-  transform: translateY(-2px) scale(1.05);
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .links-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .links-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .buttons-wrapper .hero-button {
+    width: 280px;
+    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .links-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .buttons-wrapper .hero-button {
+    width: 250px;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .buttons-wrapper {
+    gap: 1.5rem;
+  }
 }

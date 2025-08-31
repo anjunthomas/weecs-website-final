@@ -233,6 +233,14 @@ footer p {
   font-weight: 500;
 }
 
+.email-text {
+  color: #6b2c40;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .hamburger {
@@ -301,7 +309,6 @@ footer p {
     max-width: calc(100vw - 3rem);
     border-right: none;
   }
-
 
   .hero-button {
     padding: 0.8rem 2rem;

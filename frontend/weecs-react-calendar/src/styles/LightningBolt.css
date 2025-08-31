@@ -77,7 +77,7 @@
 
 @media (max-width: 768px) {
   .chameleon {
-    width: 200px;
+    width: 150px;
     right: -3rem;
     bottom: -1rem;
   }
@@ -107,7 +107,7 @@
 
 @media (max-width: 480px) {
   .chameleon {
-    width: 150px;
+    width: 110px;
     right: -2rem;
     bottom: -1rem;
   }
