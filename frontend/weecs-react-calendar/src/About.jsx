@@ -24,7 +24,7 @@ function About(){
                     Women in Electrical Engineering and Computer Science (WEECS) aims to empower women with resources and support as they strive in their academic careers at UCF. <br></br>
                     Our members have access to hands-on hardware and software projects, workshops, professional development events, and fun social events! <br></br>
                     If any of these interests you, WEECS is the place for you! 
-                    <br></br>Check out upcoming events in the calendar above and join us for our next meeting. We can't wait to see you there!
+                    <br></br>Check out upcoming events in the calendar above and join us for our next meeting. We can't wait to see you!
                 </p>
                 <img 
                     src={isBlinking ? "/static/react/assets/ChameleonBlink.png" : "/static/react/assets/Chameleon.png"} 
