@@ -22,11 +22,6 @@
   position: relative;
 }
 
-.links-container .hero-button {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
 .links-container h1::after {
   content: '';
   position: absolute;
@@ -46,14 +41,40 @@
   align-items: center;
 }
 
-.buttons-wrapper .hero-button {
-  display: block;
-  width: 300px;
-  text-align: center;
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #6b2c40;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
 }
 
-/* Mobile responsive styles */
+.social-link:hover {
+  color: #9f4e69;
+  transform: translateY(-2px);
+}
+
+.social-link i {
+  font-size: 2rem;
+}
+
+/* mobile responsive styles */
 @media (max-width: 768px) {
+  .social-link {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.5rem;
+    gap: 0.8rem;
+  }
+  
+  .social-link i {
+    font-size: 1.8rem;
+  }
+
   .links-container {
     padding: 1rem;
     margin: 1rem;
@@ -63,23 +84,17 @@
     font-size: 2.2rem;
     margin-bottom: 2rem;
   }
-  
-  .buttons-wrapper .hero-button {
-    width: 280px;
-    font-size: 1.1rem;
-    padding: 0.9rem 2rem;
-  }
 }
 
 @media (max-width: 480px) {
   .links-container h1 {
     font-size: 1.8rem;
   }
-  
-  .buttons-wrapper .hero-button {
-    width: 250px;
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
+
+  social-link {
+    font-size: 1.1rem;
+    padding: 0.7rem 1rem;
+    gap: 0.6rem;
   }
   
   .buttons-wrapper {
