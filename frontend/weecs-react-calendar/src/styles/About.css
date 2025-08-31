@@ -51,14 +51,15 @@
     max-width: 95%;
   }
   
+  .about-body {
+    font-size: 1.2rem;
+    padding: 2rem 1rem 3rem 1rem; /* added bottom padding */
+  }
+  
   .about-section {
     padding: 1.5rem;
     margin: 1rem;
-    padding-bottom: 15rem; /* reduce chameleon space */
-  }
-  
-  .about-header {
-    font-size: 2.5rem;
+    padding-bottom: 18rem; /* increased from 15rem */
   }
   
   .about-body {
@@ -74,10 +75,10 @@
   
   .about-body {
     font-size: 1.1rem;
-    padding: 1.5rem 0.5rem;
+    padding: 1.5rem 0.5rem 2rem 0.5rem;
   }
   
   .about-section {
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
   }
 }
