@@ -295,12 +295,13 @@ footer p {
 
   .hero p {
     font-size: 1.3rem;
-    padding: 1.5rem;
+    padding: 1rem;
     letter-spacing: 0.5px;
     width: calc(100% - 2rem);
     max-width: calc(100vw - 3rem);
     border-right: none;
   }
+
 
   .hero-button {
     padding: 0.8rem 2rem;
@@ -339,6 +340,7 @@ footer p {
     letter-spacing: 0.5px;
     width: calc(100% - 2rem);
     max-width: calc(100vw - 2.5rem);
+    min-height: 2rem;
   }
   
   .hero-button {

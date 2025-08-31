@@ -107,7 +107,7 @@
 
 @media (max-width: 480px) {
   .chameleon {
-    width: 200px;
+    width: 150px;
     right: -2rem;
     bottom: -1rem;
   }
