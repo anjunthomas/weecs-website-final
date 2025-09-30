@@ -238,3 +238,11 @@
     padding: 1.5rem 0.25rem;
   }
 }
+
+.event-time {
+  font-size: 1rem;        
+  font-weight: 600;
+  color: #7c2645;      
+  margin: 0 0 0.5rem;   
+  line-height: 1.4;
+}

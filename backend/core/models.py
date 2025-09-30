@@ -5,6 +5,8 @@ from imagekit.processors import ResizeToFill
 class Event(models.Model):
     title = models.CharField(max_length=200)
     date = models.DateField()
+    start_time = models.TimeField(null=True, blank=True)
+    end_time = models.TimeField(null=True, blank=True)
     description = models.TextField(blank=True)
 
     def __str__(self):

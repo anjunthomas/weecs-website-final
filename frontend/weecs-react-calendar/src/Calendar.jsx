@@ -3,6 +3,15 @@ import Calendar from 'react-calendar'; // this is a built in react library
 import 'react-calendar/dist/Calendar.css';
 import './styles/CalendarStyles.css';
 
+function formatTime(t) {
+  if (!t) return '';
+  const [hh, mm] = t.split(':');
+  let h = parseInt(hh, 10);
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  h = h % 12 || 12;
+  return `${h}:${mm} ${ampm}`;
+}
+
 function MyCalendar() {
   const [value, setValue] = useState(new Date());
   const [events, setEvents] = useState({});
@@ -12,8 +21,8 @@ function MyCalendar() {
       .then(res => res.json())
       .then(data => {
         const mapped = {};
-        data.forEach(({ date, title, description }) => {
-          mapped[date] = { title, description };
+        data.forEach(({ date, title, start_time, end_time, description }) => {
+          mapped[date] = { title, description, start_time, end_time };
         });
         setEvents(mapped);
       });
@@ -48,6 +57,12 @@ function MyCalendar() {
         {selectedEvent ? (
           <div className="event-details">
             <h3>{selectedEvent.title}</h3>
+            {(selectedEvent.start_time || selectedEvent.end_time) && (
+              <p className="event-time">
+                 {formatTime(selectedEvent.start_time)}
+                 {selectedEvent.end_time ? ` – ${formatTime(selectedEvent.end_time)}` : ''}
+              </p>
+            )}
             {selectedEvent.description && <p>{selectedEvent.description}</p>}
           </div>
         ) : (
