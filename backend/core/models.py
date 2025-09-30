@@ -13,6 +13,7 @@ class Event(models.Model):
     
 class Officer(models.Model):
     GROUP_CHOICES = [
+        ("Advisor", "Advisor"),
         ('Executive', 'Executive'),
         ('General', 'General')
     ]
