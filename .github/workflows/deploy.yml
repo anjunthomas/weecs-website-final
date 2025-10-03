@@ -11,12 +11,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build React
-        working-directory: ./frontend
-        run: |
-          npm ci
-          npm run build
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
+      - name: Install deps (React)
+        working-directory: ./frontend/weecs-react-calendar
+        run: npm ci   # uses the package-lock.json in this folder
+
+      - name: Build React
+        working-directory: ./frontend/weecs-react-calendar
+        run: npm run build   # outputs to ./frontend/weecs-react-calendar/dist (Vite default)
+
+      # ---- SSH key for rsync/remote steps ----
       - name: Start SSH agent (deploy key)
         uses: webfactory/ssh-agent@v0.9.0
         with:
