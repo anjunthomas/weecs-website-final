@@ -2,7 +2,7 @@ name: Deploy WEECS (Django + React) to Rainier
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   deploy:
