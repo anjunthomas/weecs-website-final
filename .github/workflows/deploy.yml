@@ -1,0 +1,50 @@
+name: Deploy WEECS (Django + React) to Rainier
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build React
+        working-directory: ./frontend
+        run: |
+          npm ci
+          npm run build
+
+      - name: Start SSH agent (deploy key)
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Rsync repo to server
+        run: |
+          rsync -avz --delete \
+            --exclude ".git" \
+            --exclude ".github" \
+            --exclude "node_modules" \
+            --exclude ".venv" \
+            -e "ssh -o StrictHostKeyChecking=no" \
+            ./ women@rainier.cs.ucf.edu:/export/home/www/women/
+
+      - name: Server-side deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: rainier.cs.ucf.edu
+          username: women
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            cd /export/home/www/women/backend
+            python3 -m venv .venv || true
+            source .venv/bin/activate
+            pip install --upgrade pip
+            pip install -r requirements.txt
+            python manage.py migrate --noinput
+            python manage.py collectstatic --noinput
+            deactivate

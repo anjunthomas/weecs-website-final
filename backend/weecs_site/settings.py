@@ -25,8 +25,17 @@ SECRET_KEY = 'django-insecure-3&fi7sj%j2^sl%40@4z!oh+zdp0tzntu#s5+qg7kiik7+ge-4-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "women.eecs.ucf.edu",
+    "rainier.cs.ucf.edu",
+    "localhost",
+    "127.0.0.1",
+]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://women.eecs.ucf.edu",
+    "https://rainier.cs.ucf.edu",
+]
 
 # Application definition
 
