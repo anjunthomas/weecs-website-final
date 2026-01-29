@@ -1,4 +1,5 @@
 ### WEECS website
+https://women.eecs.ucf.edu/
 
 ### Running project
     1. From root folder, enable virtual environment 
