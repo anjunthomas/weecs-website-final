@@ -38,7 +38,7 @@ jobs:
             --exclude "node_modules" \
             --exclude ".venv" \
             -e "ssh -o StrictHostKeyChecking=no" \
-            ./ women@rainier.cs.ucf.edu:/export/home/www/women/
+            ./ women@rainier.cs.ucf.edu:/export/home/www/women/app3/
 
       - name: Server-side deploy
         uses: appleboy/ssh-action@v1.0.3
@@ -48,7 +48,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
-            cd /export/home/www/women/backend
+            cd /export/home/www/women/app3/backend
             python3 -m venv .venv || true
             source .venv/bin/activate
             pip install --upgrade pip
