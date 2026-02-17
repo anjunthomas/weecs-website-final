@@ -13,6 +13,3 @@ https://women.eecs.ucf.edu/
 
     1. cd frontend/weecs-react-calendar
     2. after editing, load changes with npm run build
-
-    
-    
