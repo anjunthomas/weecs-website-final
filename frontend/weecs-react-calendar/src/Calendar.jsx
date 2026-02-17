@@ -31,8 +31,30 @@ function MyCalendar() {
   const selectedDateStr = value.toISOString().split('T')[0];
   const selectedEvent = events[selectedDateStr];
 
+    useEffect(() => {
+        if (window.location.hash !== '#calendar-section') return;
+        const scrollToCal = () => {
+            const section = document.getElementById('calendar-section');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        };
+        const timer = setTimeout(scrollToAbout, 100);
+        const onHashChange = () => {
+            if (window.location.hash === '#calendar-section') {
+                setTimeout(scrollToCal, 100);
+            }
+        };
+
+        window.addEventListener('hashchange', onHashChange);
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('hashchange', onHashChange);
+        };
+    }, []);
+
   return (
-    <div className="calendar-container">
+    <div id="calendar-section" className="calendar-container">
       <Calendar
         onChange={setValue}
         value={value}

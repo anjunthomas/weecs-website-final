@@ -14,9 +14,31 @@ function About(){
 
         return () => clearInterval(blinkInterval);
     }, []);
+// jumps to the correct section if abount from navbar is triggered.
+    useEffect(() => {
+        if (window.location.hash !== '#about-route') return;
+        const scrollToAbout = () => {
+            const section = document.getElementById('about-route');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        };
+        const timer = setTimeout(scrollToAbout, 0);
+        const onHashChange = () => {
+            if (window.location.hash === '#about-route') {
+                scrollToAbout();
+            }
+        };
+
+        window.addEventListener('hashchange', onHashChange);
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('hashchange', onHashChange);
+        };
+    }, []);
 
     return(
-        <section id="about-route" className="about-card"> {/* id is necessary to make the page scroll to "about" from the navbar*/}
+        <section id="about-route" className="about-card"> {/* id to make it scroll from navbar*/}
             <div className="about-section">
                 <h1 className="about-header">Hello and Welcome</h1>
                 {/* <h3 className="about-header-3">Hello and Welcome</h3> */}
